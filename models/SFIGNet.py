@@ -38,7 +38,7 @@ def make_coord(shape, ranges=None, flatten=True):
     
     
 class SFIGNet(nn.Module):
-    def __init__(self,HSI_bands=31,MSI_bands=3,hidden_dim=256,scale=4):
+    def __init__(self,HSI_bands=31,MSI_bands=3,hidden_dim=64,scale=4):
         super(SFIGNet, self).__init__()
         self.hsi_kan = KANLinear(HSI_bands,hidden_dim)
         self.msi_kan = KANLinear(MSI_bands,hidden_dim)
